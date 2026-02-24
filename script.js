@@ -59,3 +59,9 @@ document.getElementById("noMatchBtn")
 
 document.getElementById("startBtn")
     .addEventListener("click", startGame);
+
+fetch("/save_score", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ score: score })
+});
